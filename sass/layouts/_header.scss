@@ -1,0 +1,27 @@
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  border-bottom: 1px solid $header-border-color;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-item > .address {
+  display: flex;
+  align-items: center;
+}
