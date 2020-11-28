@@ -58,23 +58,6 @@
   .button-item > & {
     padding: 6px 22px;
   }
-
-  .modal > & {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .modal > & {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    right: 7px;
-    top: 7px;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-  }
 }
 
 .button-works {
