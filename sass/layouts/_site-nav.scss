@@ -1,58 +1,63 @@
-.site-nav .link {
-  padding-top: 28px;
-  padding-bottom: 28px;
-  color: $title-text-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.link,
+.link-footer {
+  text-decoration: none;
 }
 
-.site-nav .address {
-  color: $primary-text-color;
-  font-style: normal;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link.current {
-  color: $accent-color;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav .current::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: $accent-color;
-  height: 4px;
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav .link:hover::after,
-.site-nav .link:focus::after,
-.site-nav .current::after {
-  opacity: 1;
-}
-
-.site-nav .link {
-  display: block;
+.item > .link {
+  position: relative;
 }
 
 .site-nav {
-  display: flex;
-  align-items: center;
+  @extend %FlexGrid;
   margin-left: auto;
-}
 
-.site-nav > .address:not(:last-child) {
-  margin-right: 30px;
-}
+  &.current::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $accent-color;
+    height: 4px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
+  &.address {
+    color: $primary-text-color;
+    font-style: normal;
+  }
+
+  &.link {
+    display: block;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  & .link:hover,
+  & .link:focus,
+  & .link.current {
+    color: $accent-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  & .link:hover::after,
+  & .link:focus::after,
+  & .current::after {
+    opacity: 1;
+  }
+
+  & > .address:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & .item:not(:last-child) {
+    margin-right: 50px;
+  }
 }

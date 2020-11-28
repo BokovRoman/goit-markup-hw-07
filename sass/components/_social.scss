@@ -19,6 +19,18 @@
   height: 90px;
   border: 1px solid $social-icon-color;
   border-radius: 3%;
+
+  &:hover .client-icon,
+  &:focus .client-icon {
+    fill: $accent-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .client-list {
@@ -27,18 +39,6 @@
 
 .client-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.client-link:hover .client-icon,
-.client-link:focus .client-icon {
-  fill: $accent-color;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client-link:hover,
-.client-link:focus {
-  border-color: $accent-color;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-list > .section-image:not(:last-child) {

@@ -1,11 +1,9 @@
 .header-nav {
-  display: flex;
-  align-items: center;
+  @extend %FlexGrid;
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
+  @extend %FlexGrid;
 }
 
 header {
@@ -13,8 +11,7 @@ header {
 }
 
 .header-list {
-  display: flex;
-  align-items: center;
+  @extend %FlexGrid;
 }
 
 .header-item:not(:last-child) {
@@ -22,6 +19,5 @@ header {
 }
 
 .header-item > .address {
-  display: flex;
-  align-items: center;
+  @extend %FlexGrid;
 }
